@@ -1,0 +1,10 @@
+component	version_or_release	evidence_status	role_or_note
+Pychopper	2.7.10	manuscript_record	Full-length cDNA orientation and rescue
+STAR	2.7.10b	retained_runtime_provenance	Short-read alignment and SJ.out.tab generation
+FLAIR	3.0.0b1	retained_runtime_provenance	Transcript reconstruction, cohort combination, and quantification
+minimap2	2.30-r1287	retained_runtime_provenance	FLAIR dependency; an older draft recorded 2.28
+samtools	1.22.1	retained_runtime_provenance	BAM indexing and validation
+bedtools	2.31.1	retained_runtime_provenance	FLAIR dependency
+SQANTI3	not resolved	retained_script_only	Exact package version was not recoverable and is not inferred
+Genome assembly	GRCh38.p14	retained_reference_provenance	Reference genome
+GENCODE annotation	v48	retained_reference_provenance	Reference gene annotation
