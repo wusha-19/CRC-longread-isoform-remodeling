@@ -1,0 +1,23 @@
+method_stage	public_script	status	manuscript_role
+Pychopper full-length cDNA orientation	workflow/01_pychopper.sh	verified_publication_wrapper	Long-read preprocessing
+FLAIR long-read genomic alignment	workflow/02_flair_align.sh	reconstructed_versioned_wrapper	Splice-aware long-read alignment; exact site launcher not recovered
+STAR short-read alignment and junction output	workflow/02_star_alignment.sh	verified_publication_wrapper	Short-read alignment and splice-junction evidence
+FLAIR transcript reconstruction	workflow/03_flair_transcriptome.sh	verified_publication_wrapper	Per-sample transcript reconstruction
+FLAIR cohort combine	workflow/04_flair_combine.sh	verified_publication_wrapper	Unified transcript atlas
+FLAIR isoform quantification	workflow/05_flair_quantify.sh	verified_publication_wrapper	Isoform count and TPM matrices
+Expression-support filtering	workflow/06_filter_expression_support.py	verified_publication_wrapper	Retained quantified transcript atlas
+SQANTI3 structural annotation and filtering	workflow/07_sqanti3_annotation.sh	verified_publication_wrapper	Catalog structural annotation
+N/A/T cohort lock	analysis/01_cohort_lock.py	released_sanitized_copy	Freeze complete patient triplets and sample order
+Master isoform catalog	analysis/02_build_master_catalog.py	released_sanitized_copy	Catalog and quantified-isoform definitions
+Paired differential transcript expression	analysis/03_dte_paired.R	released_sanitized_copy	DTE analysis
+Paired differential transcript usage	analysis/04_dtu_saturn_stageR.R	released_sanitized_copy	satuRn-stageR DTU analysis
+N/A/T tissue-state classification	analysis/05_nat_tissue_state_patterns.py	released_sanitized_copy	Cross-sectional tissue-state pattern analysis
+ORF and molecular feature annotation	analysis/06_orf_domain_validation.py	released_sanitized_copy	ORF/coding/NMD feature audit
+Pfam comparison-domain annotation	analysis/07_comparison_domain_pipeline.py	released_sanitized_copy	Within-gene protein-domain comparison
+Matched short-read gene-level comparison	analysis/08_matched_shortread_gene_comparison.R	released_sanitized_copy	Gene-abundance versus isoform-remodeling analysis
+Measurement robustness analysis	analysis/09_measurement_robustness.R	released_sanitized_copy	Reliability, attenuation, partial correlation, and cross-validation
+Measurement robustness supplementary tables	analysis/10_measurement_robustness_supplementary_tables.py	released_sanitized_copy	Supplementary measurement-audit tables
+Short-read junction support	analysis/11_shortread_junction_support.py	released_sanitized_copy	Orthogonal event-level junction support
+Figure 1	figures/01_build_figure1.R	released_sanitized_copy	Cohort and isoform atlas
+Figure 2	figures/02_build_figure2.R	released_sanitized_copy	Tumor-associated DTE/DTU and tissue-state patterns
+Figure 3	figures/03_build_figure3_common_universe.R	released_sanitized_copy	Matched short-read gene abundance versus long-read DTU in the common testable universe
